@@ -1,6 +1,6 @@
 <template>
   <div class="uk-card uk-card-default uk-card-body uk-margin" uk-sticky="offset: 20; bottom: true">
-    <img src="https://assets-ouch.icons8.com/preview/125/6414b067-ba59-46ef-8693-4e190aa466c7.png"
+    <img src="https://ik.imagekit.io/alouh/misc/twinkle-woman-standing-with-a-shopping-cart_TdYTFGd0L.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650221625449"
          class="uk-align-center" height="250" width="250" alt=""/>
 
     <div v-if="price > 0">
@@ -31,6 +31,9 @@
       <NuxtLink tag="button" to="/users/orders/create" class="uk-button uk-button-primary" name="button">Зробити замовлення
         ({{ decimalPrice(price) }}₴)
       </NuxtLink>
+    </div>
+    <div v-else>
+      Ви поки нічого не додали в кошик.
     </div>
 
   </div>

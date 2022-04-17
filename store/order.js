@@ -9,7 +9,7 @@ export const state = () => ({
 export const mutations = {
   setLocation(state, location) {
     state.location = location
-    Cookies.set('location', state.location)
+    Cookies.set('location', JSON.stringify(state.location))
   },
 
   setAddress(state, address) {

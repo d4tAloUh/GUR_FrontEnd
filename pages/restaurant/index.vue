@@ -40,9 +40,9 @@
               </template>
               <div class="uk-container uk-container-center uk-text-center"
                    v-if="restaurantList.length === 0 && accepted">
-                <img src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"
-                     height="600"
-                     width="600">
+<!--                <img src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png"-->
+<!--                     height="600"-->
+<!--                     width="600">-->
                 <p>Ресторанів не знайдено</p>
               </div>
             </div>

@@ -110,7 +110,7 @@ export default {
     order: null,
     interval: null
   }),
-  async mounted(){
+  async mounted() {
     await this.getDetails();
     window.addEventListener('beforeunload', () => {
       this.disconnect_socket()
@@ -123,14 +123,14 @@ export default {
     this.disconnect_socket()
   },
   methods: {
-    disconnect_socket(){
+    disconnect_socket() {
       try {
         this.websocket.onclose = function () {
         }; // disable onclose handler first
         clearInterval(this.interval)
         this.websocket.close();
+      } catch (e) {
       }
-      catch (e){}
     },
     decimalPrice: OrderHelper.decimalPrice,
     async getDetails() {

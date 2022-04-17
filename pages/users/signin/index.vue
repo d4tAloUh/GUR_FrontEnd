@@ -106,8 +106,15 @@ export default {
             if (this.isCourier) {
               await this.$router.push('/courier/')
             } else {
-              await this.syncCart()
-              await this.$router.push('/restaurant')
+              try{
+                await this.syncCart()
+              } catch (e){
+                this.$toast.info("Сталася помилка, коли отримували замовлення", {
+                  toastClassName: ['uk-margin-top']
+                })
+              }
+
+              await this.$router.push('/profile')
             }
           }
         } catch (err) {

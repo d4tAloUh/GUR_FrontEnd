@@ -26,7 +26,7 @@ export const mutations = {
   },
   set_user(state, user) {
     state.user = JSON.parse(JSON.stringify(user))
-    Cookies.set('user', state.user)
+    Cookies.set('user', JSON.stringify(user))
   },
   retried(state, val) {
     state.retry = val
@@ -34,12 +34,12 @@ export const mutations = {
   set_tel_num(state, tel_num) {
     if (state.user)
       state.user.tel_num = tel_num
-    Cookies.set('user', state.user)
+    Cookies.set('user', JSON.stringify(state.user))
   },
   set_user_name(state, name) {
     if (state.user)
       state.user.first_name = name
-    Cookies.set('user', state.user)
+    Cookies.set('user', JSON.stringify(state.user))
   }
 }
 export const getters = {

@@ -7,12 +7,12 @@
           <li class="uk-active">
             <NuxtLink tag="a" class="navbar-brand" to="/" exact>GUR</NuxtLink>
           </li>
-<!--          <li v-if="isCourier">-->
-<!--            <NuxtLink tag="a" class="navbar-brand" to="/courier/" exact>Замовлення</NuxtLink>-->
-<!--          </li>-->
-<!--          <li v-else>-->
-<!--            <NuxtLink tag="a" class="navbar-brand" to="/restaurant" exact>Ресторани</NuxtLink>-->
-<!--          </li>-->
+          <li v-if="isCourier">
+            <NuxtLink tag="a" class="navbar-brand" to="/courier/" exact>Замовлення</NuxtLink>
+          </li>
+          <li v-else>
+            <NuxtLink tag="a" class="navbar-brand" to="/restaurant" exact>Ресторани</NuxtLink>
+          </li>
         </ul>
 
       </div>

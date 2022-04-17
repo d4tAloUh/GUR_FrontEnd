@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie'
-
 export const state = () => ({
   deleted_rest_id: 0,
 })

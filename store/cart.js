@@ -9,7 +9,7 @@ export const state = () => ({
 export const mutations = {
   setItems(state, items) {
     state.items = items
-    Cookies.set('cart', state.items)
+    Cookies.set('cart', JSON.stringify(state.items))
   },
   setOrder(state, order) {
     state.order_id = order
@@ -25,29 +25,29 @@ export const mutations = {
 
   increaseQuantity(state, record) {
     record.quantity++
-    Cookies.set('cart', state.items)
+    Cookies.set('cart', JSON.stringify(state.items))
   },
   addNotExistingItem(state, item) {
     state.items.push({
       quantity: 1,
       ...item
     })
-    Cookies.set('cart', state.items)
+    Cookies.set('cart', JSON.stringify(state.items))
   },
   reduceQuantity(state, record) {
     record.quantity--
-    Cookies.set('cart', state.items)
+    Cookies.set('cart', JSON.stringify(state.items))
   },
 
   delete(state, item) {
     const index = state.items.findIndex(i => i.dish_id === item.dish_id)
     state.items.splice(index, 1)
-    Cookies.set('cart', state.items)
+    Cookies.set('cart', JSON.stringify(state.items))
   },
   emptyList(state) {
     state.items = []
     state.rest_id = 0
-    Cookies.set('cart', state.items)
+    Cookies.set('cart', [])
     Cookies.set('rest_id', state.rest_id)
   }
 }

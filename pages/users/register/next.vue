@@ -47,7 +47,7 @@ export default {
   methods: {
     send_update: _.debounce(async function () {
       try {
-        if (this.first_name.trim().length < 3){
+        if (this.first_name.trim().length < 3) {
           this.$toast.warning("Введіть корректне ім'я", {
             toastClassName: ['uk-margin-top']
           })
@@ -75,7 +75,7 @@ export default {
           this.$toast.warning("Помилка мережі", {
             toastClassName: ['uk-margin-top']
           })
-        else {
+         else {
           this.$toast.warning(ResErrorHandler.checkFormErrors(err) || "Сталася помилка. Інформація не була додана.", {
             toastClassName: ['uk-margin-top']
           })
